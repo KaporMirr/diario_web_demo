@@ -59,13 +59,16 @@ require("../backend/admin_noticias.php");
                 <div class="dropdown col-2">
                     <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Filtrar por categoría
+                        Filtrar por autor
                     </button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="todas_publicaciones.php">Todo</a></li>
-                        <li><a class="dropdown-item" href="todas_publicaciones.php?categoria=Negocios">Negocios</a></li>
-                        <li><a class="dropdown-item" href="todas_publicaciones.php?categoria=Tecnologia">Tecnología</a></li>
-                        <li><a class="dropdown-item" href="todas_publicaciones.php?categoria=Ciencia">Ciencia</a></li>
+                        <?php foreach ($autores as $autor_actual): ?>
+                            <li><a class="dropdown-item"
+                                    href="todas_publicaciones.php?autor=<?= $autor_actual['id_usuario']; ?>">
+                                    <?= $autor_actual['autor']; ?>
+                                </a></li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
                 <?php if ($todas_publicaciones->rowCount() > 0): ?>
