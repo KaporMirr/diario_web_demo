@@ -26,24 +26,24 @@ if (!isset($_SESSION['usuario_logueado'])) {
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a href="../noticias/index.php" class="nav-link">Inicio</a>
+                    <a href="../noticias/index.php" class="nav-link link-underline">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a href="../noticias/index.php?categoria=Deportes" class="nav-link">Deportes</a>
+                    <a href="../noticias/index.php?categoria=Negocios" class="nav-link">Negocios</a>
                 </li>
                 <li class="nav-item">
-                    <a href="../noticias/index.php?categoria=Moda" class="nav-link">Moda</a>
+                    <a href="../noticias/index.php?categoria=Tecnologia" class="nav-link">Tecnología</a>
                 </li>
                 <li class="nav-item">
-                    <a href="../noticias/index.php?categoria=Sociales" class="nav-link">Sociales</a>
+                    <a href="../noticias/index.php?categoria=Ciencia" class="nav-link">Ciencia</a>
                 </li>
             </ul>
 
             <div class="navbar-nav">
                 <?php if ($is_logged): ?>
                     <div class="dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" id="dropdownUser1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             <?php if ($rol == "admin"): ?>
                                 <img src="../imagenes/logos/useradmin.png" class="img-fluid" alt="usuario-logo" width="50">
                             <?php else: ?>
@@ -52,18 +52,26 @@ if (!isset($_SESSION['usuario_logueado'])) {
                             <?= $nombre ?>
                         </a>
                         <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                            <?php if($rol == "admin"): ?> 
-                                <li><h6 class="dropdown-header">Panel Admin</h6></li>
+                            <?php if ($rol == "admin"): ?>
+                                <li>
+                                    <h6 class="dropdown-header">Panel Admin</h6>
+                                </li>
                                 <li><a class="dropdown-item" href="index.php">Admin usuarios</a></li>
                                 <li><a class="dropdown-item" href="todas_publicaciones.php">Admin Publicaciones</a></li>
-                                <li><hr class="dropdown-divider" /></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
                             <?php else: ?>
                                 <li></li>
                             <?php endif ?>
-                            <li><h6 class="dropdown-header">Panel Autor</h6></li>
+                            <li>
+                                <h6 class="dropdown-header">Panel Autor</h6>
+                            </li>
                             <li><a class="dropdown-item" href="mis_publicaciones.php">Mis Publicaciones</a></li>
                             <li><a class="dropdown-item" href="../noticias/form_agregar.php">Nueva Publicación</a></li>
-                            <li><hr class="dropdown-divider" /></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
                             <li><a class="dropdown-item" href="../backend/logout.php">Cerrar sesión</a></li>
                         </ul>
                     </div>

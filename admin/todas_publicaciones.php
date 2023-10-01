@@ -28,10 +28,10 @@ require("../backend/admin_noticias.php");
     <script src="https://kit.fontawesome.com/cac8e89f4d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../estaticos/css/style.css">
 
-    <title>Mis publicaciones</title>
+    <title>Administrador de publicaciones</title>
 </head>
 
-<body class="bg-secondary bg-gradient text-bg-dark">
+<body class="bg-light bg-gradient">
     <!-- NAVBAR -->
     <div class="">
         <?php require("menu.php"); ?>
@@ -41,105 +41,107 @@ require("../backend/admin_noticias.php");
     <!-- CONTENT -->
     <div class="container-fluid">
         <div class="container">
-            <h1 class="text-center">Todas las publicaciones</h1>
+            <h1 class="text-center">Administrador de publicaciones</h1>
         </div>
 
         <?php
         if (!empty($mensaje)) {
-            echo "<div class='alert alert-success' role='alert'>" . $mensaje . "</div>";
+            echo "<div class='alert alert-success text-center' role='alert'>" . $mensaje . "</div>";
         }
         ?>
 
-
-        <div class="container mt-3">
-            <div class="row">
-                <a href="../noticias/form_agregar.php" class="btn btn-sm btn-info col-2 offset-5 mb-4">
+        <div class="mt-3">
+            <div class="row justify-content-center">
+                <a href="../noticias/form_agregar.php" class="btn btn-sm btn-primary col-2 mb-4">
                     <i class="fa-solid fa-square-plus"></i>
                     Nueva
                 </a>
+                <div class="dropdown col-2">
+                    <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Filtrar por categoría
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="todas_publicaciones.php">Todo</a></li>
+                        <li><a class="dropdown-item" href="todas_publicaciones.php?categoria=Negocios">Negocios</a></li>
+                        <li><a class="dropdown-item" href="todas_publicaciones.php?categoria=Tecnologia">Tecnología</a></li>
+                        <li><a class="dropdown-item" href="todas_publicaciones.php?categoria=Ciencia">Ciencia</a></li>
+                    </ul>
+                </div>
                 <?php if ($todas_publicaciones->rowCount() > 0): ?>
-                    <?php foreach ($todas_publicaciones as $noticia): ?>
-                        <div class="col-12 mb-4">
-                            <div class="card p-3 shadow border-black rounded-1 mb-3">
-                                <div class="row g-0">
-                                    <div class="col-md-3 col-sm-12 justify-content-center align-items-center">
-                                        <!-- src="<php print($noticia['imagen'])";?> -->
-                                        <img src="../imagenes/subidas/<?php print($noticia['imagen']); ?>"
-                                            class="img-fluid rounded-1" alt="Imagen de la tarjeta">
-                                    </div>
-                                    <div class="col-md-8 col-sm-12">
-                                        <div class="card-body">
-                                            <p class="card-title mb-1 border-bottom">
-                                                <strong>Título:</strong><br>
-                                                "
-                                                <?php print($noticia['titulo']); ?>"
-                                            </p>
 
-                                            <p class="card-text mb-1 border-bottom">
-                                                <strong>Copete:</strong><br>
-                                                "
-                                                <?php print(substr($noticia['copete'], 0, 100)); ?> ..."
-                                            </p>
-                                            <p class="card-text mb-1 border-bottom">
-                                                <strong>Cuerpo:</strong><br>
-                                                "
-                                                <?php print(substr($noticia['cuerpo'], 0, 100)); ?> ..."
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-1 col-sm-12">
-                                        <div class="">
-                                            <div
-                                                class=" d-flex flex-column flex-wrap justify-content-center text-center slign-items-center w-100">
-
-                                                <a href="<?php print('noticias_editar.php?id_noticia=' . $noticia["id_noticia"] . ''); ?>"
-                                                    class="btn btn-sm btn-dark m-1"><i class="fa-solid fa-pencil"></i></a>
-                                                <a href="<?php print('../backend/borrar_noticia.php?id_noticia=' . $noticia["id_noticia"] . '&imagen=' . $noticia["imagen"] . ''); ?>"
-                                                    class="btn btn-sm btn-outline-danger m-1"
-                                                    onclick="return confirm(&quot; Desea eliminar &quot;)"><i
-                                                        class="fa-solid fa-trash-can"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer text-left col-12">
-                                        <small>Publicada el:
-                                            <span class="badge text-bg-dark">
-                                                <?php print($noticia['fecha']) ?>
-                                            </span>
-                                        </small>
-                                        <small>Autor:
-                                            <span class="badge text-bg-dark">
-                                                <?php print($noticia['autor']) ?>
-                                            </span>
-                                        </small>
-                                        <?php if ($noticia['rol'] == "admin"): ?>
-                                            <small>Rol:
-                                                <span class="badge text-bg-danger">
-                                                    <?php print(strtoupper($noticia['rol'])) ?>
-                                                </span>
-                                            </small>
-                                        <?php else: ?>
-                                            <small>Rol:
-                                                <span class="badge text-bg-secondary">
-                                                    AUTOR
-                                                </span>
-                                            </small>
-                                        <?php endif ?>
-                                    </div>
+                    <div class="">
+                        <div class="row shadow">
+                            <div class="col-12">
+                                <a href=""></a>
+                                <a href=""></a>
+                                <a href=""></a>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover table-sm table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="col-1">Imagen</th>
+                                                <th scope="col">Título</th>
+                                                <th scope="col">Publicada</th>
+                                                <th scope="col">Autor</th>
+                                                <th scope="col">Rol</th>
+                                                <th scope="col">Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php foreach ($todas_publicaciones as $noticia): ?>
+                                                <tr>
+                                                    <td>
+                                                        <img src="../imagenes/subidas/<?php echo $noticia['imagen']; ?>"
+                                                            class="img-fluid rounded-1" alt="Imagen de la noticia" width="100">
+                                                    </td>
+                                                    <td><small>
+                                                            <?php echo $noticia['titulo']; ?>
+                                                        </small></td>
+                                                    <td><small>
+                                                            <?php echo $noticia['fecha']; ?>
+                                                        </small></td>
+                                                    <td><small>
+                                                            <?php echo $noticia['autor']; ?>
+                                                        </small></td>
+                                                    <td>
+                                                        <?php if ($noticia['rol'] == "admin"): ?>
+                                                            <small class="">
+                                                                <?php echo "Admin"; ?></span>
+                                                            <?php else: ?>
+                                                                <small class="">
+                                                                    <?php echo "Autor"; ?></span>
+                                                                <?php endif ?>
+                                                    </td>
+                                                    <td>
+                                                        <div class="btn-group" role="group">
+                                                            <a href="../noticias/form_editar.php?id_noticia=<?php echo $noticia["id_noticia"]; ?>"
+                                                                class="btn btn-sm btn-dark" title="Editar"><i
+                                                                    class="fas fa-pencil-alt"></i></a>
+                                                            <a href="../backend/borrar_noticia.php?id_noticia=<?php echo $noticia["id_noticia"]; ?>&imagen=<?php echo $noticia["imagen"]; ?>"
+                                                                class="btn btn-sm btn-outline-danger"
+                                                                onclick="return confirm('¿Desea eliminar?')" title="Eliminar"><i
+                                                                    class="fas fa-trash"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            <?php endforeach; ?>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-                        <?php endforeach; ?>
-
+                        </div>
                     </div>
-                </div>
+                <?php else: ?>
+                    <div class="container mt-3 alert alert-secondary">
+                        Aún no has publicado nada
+                    </div>
+                <?php endif ?>
             </div>
-
-        <?php else: ?>
-            <div class="container mt-3 alert alert-secondary">
-                Aún no has publicado nada
-            </div>
-        <?php endif ?>
+        </div>
+    </div>
 </body>
 
 </html>

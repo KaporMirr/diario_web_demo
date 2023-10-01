@@ -60,8 +60,8 @@ if (!isset($_SESSION['usuario_logueado']))
                 </select>
             </div>
             <div class="mb-3">
-                <input type="submit" class="btn btn-sm btn-dark" id="enviar" name="enviar" value="GUARDAR">
-                <a name="" id="" class="btn btn-sm btn-outline-danger" href="../admin/" role="button">CANCELAR</a>
+                <input type="submit" class="btn btn-sm btn-dark" id="enviar" name="enviar" value="Guardar">
+                <a name="" id="" class="btn btn-sm btn-outline-danger" href="../admin/mis_publicaciones.php" role="button">Cancelar</a>
             </div>
         </form>
     </div>

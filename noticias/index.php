@@ -2,15 +2,7 @@
 session_start();
 extract($_REQUEST);
 
-$path_root = "../";
-$path_backend = "../backend/";
-$path_noticias = "../noticias/";
-$path_imagenes = "../imagenes/";
-
-$archivo = "conexion.php";
-
-// Full path--> ../backend/conexion.php
-require($path_backend.$archivo);
+require("../backend/conexion.php");
 
 $categoria = isset($_GET['categoria']) ? $_GET['categoria'] : '';
 
