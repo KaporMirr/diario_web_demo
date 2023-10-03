@@ -28,7 +28,8 @@ $instruccion->execute();
 // Cerrando conexión
 $conexion = null;
 
-if($rol != "admin") {
+
+if($_SESSION['id_usuario'] == $id_usuario && $rol != "admin") {
     $_SESSION['rol'] = "autor";
 }
 
