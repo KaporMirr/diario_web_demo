@@ -23,17 +23,18 @@ $rol = $_SESSION['rol'];
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/cac8e89f4d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../estaticos/css/style.css">
     
     <title>Admin panel</title>
 
 </head>
 
-<body class="bg-secondary bg-gradient text-bg-dark">
+<body class="bg-gradient">
     <?php require("menu.php"); ?>
     <?php if($rol == "autor"): ?>
         <?php header("location:mis_publicaciones.php?mensaje=Bienvenido de nuevo");?>
     <?php elseif($rol == "admin"): ?>
-        <?php require("panel.php"); ?>
+        <?php require("usuarios.php"); ?>
     <?php endif ?>
 </body>
 

@@ -7,11 +7,6 @@ if (!isset($_SESSION['usuario_logueado']))
 
 require("conexion.php");
 
-// Saneando datos
-$titulo = $conexion->quote($titulo);
-$copete = $conexion->quote($copete);
-$cuerpo = $conexion->quote($cuerpo);
-
 // Manejando imágenes
 $copiarArchivo = false;
 if (is_uploaded_file($_FILES['imagen']['tmp_name'])) {
@@ -48,5 +43,5 @@ $instruccion->execute();
 // Cerrando conexión
 $conexion = null;
 //Redirección a la página de edición
-header("location:../noticias/form_editar.php?mensaje=Publicación editada con exito&id_noticia=" . $id_noticia);
+header("location:../admin/index.php?mensaje=Publicación editada con exito&id_noticia=" . $id_noticia);
 ?>

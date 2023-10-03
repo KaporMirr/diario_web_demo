@@ -26,8 +26,3 @@ a, button, small {
 p {
     font-family: var(--font-roboto);
 }
-
-.nav-a-hover:hover {
-    color: rgb(255, 0, 0) !important;
-}
-

@@ -52,7 +52,7 @@ require("../backend/admin_noticias.php");
 
         <div class="mt-3">
             <div class="row justify-content-center">
-                <a href="../noticias/form_agregar.php" class="btn btn-sm btn-primary col-2 mb-4">
+                <a href="../noticias/form_agregar.php" class="btn btn-sm btn-dark col-2 mb-4">
                     <i class="fa-solid fa-square-plus"></i>
                     Nueva
                 </a>
@@ -75,16 +75,11 @@ require("../backend/admin_noticias.php");
 
                     <div class="">
                         <div class="row shadow">
-                            <div class="col-12">
-                                <a href=""></a>
-                                <a href=""></a>
-                                <a href=""></a>
-                            </div>
                             <div class="col-md-12">
                                 <div class="table-responsive">
                                     <table class="table table-striped table-hover table-sm table-bordered">
                                         <thead>
-                                            <tr>
+                                            <tr class="table-dark">
                                                 <th scope="col" class="col-1">Imagen</th>
                                                 <th scope="col">Título</th>
                                                 <th scope="col">Publicada</th>
@@ -121,7 +116,7 @@ require("../backend/admin_noticias.php");
                                                     <td>
                                                         <div class="btn-group" role="group">
                                                             <a href="../noticias/form_editar.php?id_noticia=<?php echo $noticia["id_noticia"]; ?>"
-                                                                class="btn btn-sm btn-dark" title="Editar"><i
+                                                                class="btn btn-sm btn-outline-primary" title="Editar"><i
                                                                     class="fas fa-pencil-alt"></i></a>
                                                             <a href="../backend/borrar_noticia.php?id_noticia=<?php echo $noticia["id_noticia"]; ?>&imagen=<?php echo $noticia["imagen"]; ?>"
                                                                 class="btn btn-sm btn-outline-danger"

@@ -2,13 +2,15 @@
 extract($_REQUEST);
 if (!isset($_SESSION['usuario_logueado'])) {
     $is_logged = false;
+    $_SESSION['rol'] = 'visitante';
+    $rol = $_SESSION['rol'];
 } else {
     $is_logged = true;
     $nombre = $_SESSION['nombre'];
     $rol = $_SESSION['rol'];
 }
-
 ?>
+
 
 
 <!-- MENÚ NAVBAR PARA TODO EL SITIO -->
@@ -76,7 +78,8 @@ if (!isset($_SESSION['usuario_logueado'])) {
                         </ul>
                     </div>
                 <?php else: ?>
-                    <a href="form_login.php" class="btn btn-outline-primary">Ingresar</a>
+                    <a href="form_login.php" class="btn btn-outline-dark">Ingresar</a>
+                    <a class="nav-link text-center link-primary" href="agregar_usuario.php">Quiero ser autor</a>
                 <?php endif; ?>
             </div>
         </div>

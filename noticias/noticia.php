@@ -32,6 +32,7 @@ if ($categoria == 'sociales') {
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/cac8e89f4d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../estaticos/css/style.css">
 
     <!---------- title ---------->
     <link rel="shortcut icon" href="../imagenes/logos/favicon.png" type="image/x-icon">

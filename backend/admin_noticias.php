@@ -2,22 +2,11 @@
 
 extract($_REQUEST);
 
-// Rutas
-$path_root = "../";
-$path_backend = "../backend/";
-$path_admin = "../admin/";
-$path_noticias = "../noticias/";
-$path_imagenes = "../imagenes/";
-
-
 // Importaciones
-$archivo = "conexion.php";
-// Full path--> ../backend/conexion.php
-require($path_backend.$archivo);
-
+require("conexion.php");
 
 if (!isset($_SESSION['usuario_logueado']))
-    header("location:" . $path_admin . "form_login.php");
+    header("location:../admin/form_login.php");
 
 $id_usuario=$_SESSION['id_usuario'];
 

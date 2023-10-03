@@ -6,10 +6,9 @@ if (!isset($_SESSION['usuario_logueado']))
 
 require("conexion.php");
 
-$instruccion = "DELETE FROM news WHERE id_noticia='$id_noticia'";
+$instruccion = "DELETE FROM usuarios WHERE id_usuario='$del_usuario'";
 
-unlink("../imagenes/subidas/" . $imagen);
 $consulta = $conexion->query($instruccion);
 $conexion = null;
-header("location:../admin/index.php?mensaje=Publicación borrada con éxito");
+header("location:../admin/index.php?mensaje=Usuario borrado con éxito");
 ?>

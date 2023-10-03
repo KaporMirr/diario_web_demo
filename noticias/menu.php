@@ -2,6 +2,8 @@
 extract($_REQUEST);
 if (!isset($_SESSION['usuario_logueado'])) {
     $is_logged = false;
+    $_SESSION['rol'] = 'visitante';
+    $rol = $_SESSION['rol'];
 } else {
     $is_logged = true;
     $nombre = $_SESSION['nombre'];
@@ -78,6 +80,7 @@ if (!isset($_SESSION['usuario_logueado'])) {
                     <a href="../admin/form_login.php" class="btn btn-outline-dark img-fluid">
                         Ingresar
                     </a>
+                    <a class="nav-link text-center link-primary" href="../admin/agregar_usuario.php">Quiero ser autor</a>
                 <?php endif; ?>
             </div>
         </div>

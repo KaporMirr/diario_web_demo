@@ -12,11 +12,7 @@ require("conexion.php");
 // Formato fecha
 $fecha = date("Y-m-d"); 
 
-// Tratamiendo y saneamiento de datos
 $id_usuario = $_SESSION['id_usuario'];
-$titulo = $conexion->quote($titulo);
-$copete = $conexion->quote($copete);
-$cuerpo = $conexion->quote($cuerpo);
 
 // Manejando imágenes
 $copiarArchivo = false;

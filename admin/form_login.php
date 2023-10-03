@@ -20,6 +20,7 @@ if (isset($_SESSION['usuario_logueado']))
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/cac8e89f4d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../estaticos/css/style.css">
     
     <title>Autenticación</title>
 </head>
@@ -30,7 +31,7 @@ if (isset($_SESSION['usuario_logueado']))
     </div>
     <div class=" text-center">
         <div class="row">
-            <div class="form-signin card col-8 offset-2 p-3 mt-5 shadow-lg rounded-4">
+            <div class="form-signin bg-secondary-subtle card col-8 offset-2 p-3 mt-5 shadow-lg rounded-4">
                 <div class="mb-5">
                     <?php
                     if (isset($mensaje)) {
