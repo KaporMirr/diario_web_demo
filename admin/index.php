@@ -32,7 +32,7 @@ $rol = $_SESSION['rol'];
 <body class="bg-gradient">
     <?php require("menu.php"); ?>
     <?php if($rol == "autor"): ?>
-        <?php header("location:mis_publicaciones.php?mensaje=Bienvenido de nuevo");?>
+        <?php require("publicaciones.php");?>
     <?php elseif($rol == "admin"): ?>
         <?php require("usuarios.php"); ?>
     <?php endif ?>

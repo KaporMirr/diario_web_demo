@@ -56,7 +56,7 @@ if (!isset($_SESSION['usuario_logueado'])) {
                                 <li>
                                     <h6 class="dropdown-header">Panel Admin</h6>
                                 </li>
-                                <li><a class="dropdown-item" href="../admin/index.php">Admin usuarios</a></li>
+                                <li><a class="dropdown-item" href="../admin/mis_publicaciones.php">Admin usuarios</a></li>
                                 <li><a class="dropdown-item" href="../admin/todas_publicaciones.php">Admin Publicaciones</a>
                                 </li>
                                 <li>
@@ -68,7 +68,7 @@ if (!isset($_SESSION['usuario_logueado'])) {
                             <li>
                                 <h6 class="dropdown-header">Panel Autor</h6>
                             </li>
-                            <li><a class="dropdown-item" href="../admin/mis_publicaciones.php">Mis Publicaciones</a></li>
+                            <li><a class="dropdown-item" href="../admin/index.php">Mis Publicaciones</a></li>
                             <li><a class="dropdown-item" href="form_agregar.php">Nueva Publicación</a></li>
                             <li>
                                 <hr class="dropdown-divider" />
