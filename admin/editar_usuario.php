@@ -52,7 +52,7 @@ $conexion = null;
                         value="<?= $resultado['nombre']; ?>" required>
                 </div>
                 <div class="input-group input-group-sm mb-3">
-                    <label for="apellido" class="input-group-text">Usuario</label>
+                    <label for="apellido" class="input-group-text">Apellido</label>
                     <input type="text" class="form-control" name="apellido" id="apellido"
                         value="<?= $resultado['apellido']; ?>" required>
                 </div>
