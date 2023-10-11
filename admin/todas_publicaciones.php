@@ -140,6 +140,7 @@ require("../backend/admin_noticias.php");
             </div>
         </div>
     </div>
+    <?php require("../noticias/footer.php"); ?>
 </body>
 
 </html>

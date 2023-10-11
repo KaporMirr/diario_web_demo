@@ -36,6 +36,7 @@ $rol = $_SESSION['rol'];
     <?php elseif($rol == "admin"): ?>
         <?php require("usuarios.php"); ?>
     <?php endif ?>
+    <?php require("../noticias/footer.php"); ?>
 </body>
 
 </html>

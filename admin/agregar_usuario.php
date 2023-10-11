@@ -76,6 +76,8 @@ extract($_REQUEST);
         </div>
     </main>
 
+    <?php require("../noticias/footer.php"); ?>
+
     <script>
         document.getElementById("usuario").addEventListener("input", function () {
             var nombreUsuario = this.value;

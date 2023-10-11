@@ -8,18 +8,18 @@ require("conexion.php");
 if (!isset($_SESSION['usuario_logueado']))
     header("location:../admin/form_login.php");
 
-$id_usuario=$_SESSION['id_usuario'];
+$id_usuario = $_SESSION['id_usuario'];
 
-if (!isset($autor)){
+if (!isset($autor)) {
 
-$instruccion = "
+    $instruccion = "
     SELECT news.*, CONCAT(usuarios.nombre, ' ', usuarios.apellido) AS autor, usuarios.rol 
     FROM news 
     INNER JOIN usuarios ON news.id_usuario = usuarios.id_usuario
     ORDER BY news.fecha DESC
 ";
 } else {
-    $instruccion ="
+    $instruccion = "
     SELECT news.*, CONCAT(usuarios.nombre, ' ', usuarios.apellido) AS autor, usuarios.rol 
     FROM news 
     INNER JOIN usuarios ON news.id_usuario = usuarios.id_usuario

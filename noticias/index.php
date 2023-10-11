@@ -132,6 +132,7 @@ $noticias = $resultados->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </div>
     <?php $conexion = null ?>
+    <?php require("footer.php"); ?>
 </body>
 
 </html>

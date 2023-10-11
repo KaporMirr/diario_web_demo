@@ -131,6 +131,7 @@ $rol= $_SESSION['rol'];
             <?php endif ?>
         </div>
     </div>
+    <?php require("../noticias/footer.php"); ?>
 </body>
 
 </html>

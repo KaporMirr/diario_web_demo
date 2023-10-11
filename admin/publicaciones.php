@@ -17,7 +17,7 @@ $rol= $_SESSION['rol'];
 
 <body>
     <!-- CONTENT -->
-    <div class="container-fluid">
+    <div class="container-fluid min-vh-100">
         <div class="container">
             <h1 class="text-center">Mis publicaciones</h1>
         </div>

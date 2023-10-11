@@ -21,7 +21,7 @@ require("../backend/admin_usuarios.php");
 
 <body class="bg-light bg-gradient">
     <!-- CONTENT -->
-    <div class="container-fluid">
+    <div class="container-fluid mb-5 min-vh-100">
         <div class="container">
             <h1 class="text-center">Administrador de usuarios</h1>
         </div>

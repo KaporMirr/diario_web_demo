@@ -83,6 +83,7 @@ $conexion = null;
             </form>
         </div>
     </main>
+    <?php require("../noticias/footer.php"); ?>
 </body>
 
 </html>

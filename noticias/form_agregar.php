@@ -67,6 +67,8 @@ if (!isset($_SESSION['usuario_logueado']))
         </form>
     </div>
 
+    <?php require("footer.php"); ?>
+
     <div id="librerias">
         <script>
             $(document).ready(function () {

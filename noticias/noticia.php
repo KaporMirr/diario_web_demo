@@ -88,8 +88,7 @@ if ($categoria == 'sociales') {
         </main>
     </div>
 
-    <footer class="">
-    </footer>
+    <?php require("footer.php"); ?>
 </body>
 
 </html>

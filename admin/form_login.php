@@ -73,6 +73,7 @@ if (isset($_SESSION['usuario_logueado']))
                 </form>
             </div>
         </div>
+        <?php require("../noticias/footer.php"); ?>
 </body>
 
 </html>

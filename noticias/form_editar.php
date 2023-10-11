@@ -99,6 +99,8 @@ $conexion = null;
             });
         </script>
     </div>
+
+    <?php require("footer.php"); ?>
 </body>
 
 </html>
