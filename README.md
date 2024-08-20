@@ -99,6 +99,6 @@ El proyecto incluye las siguientes características destacadas:
 Este proyecto final representa un logro significativo en la implementación de una página web de un diario con funcionalidades Fullstack utilizando PHP y MySQL. Las características cumplen con las consignas del curso, y se ha agregado valor a través de innovaciones creativas como el inicio de sesión basado en roles y los filtros avanzados.
 
 Este proyecto ha sido realizado como parte del Curso de Fullstack Jr en el marco del programa Argentina Programa 4.0, proporcionando una valiosa experiencia en el desarrollo de aplicaciones web Fullstack.
-
+https://diariofakes.000webhostapp.com/diario/noticias/
 **Equipo de Desarrollo:**
 Juan Esparza
